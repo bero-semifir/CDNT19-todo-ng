@@ -1,6 +1,6 @@
 # TodoNg
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 14.2.7.
+Liste de tache en Angular en tant que TP pour la promo CDNT 19 d'Aston.
 
 ## Development server
 
