@@ -14,8 +14,15 @@ export class AppComponent implements OnInit {
   constructor(private tachesService: TachesService){}
 
   ngOnInit(): void {
-    this.taches = this.tachesService.getTaches();
-    console.table(this.taches)
+    this.tachesService.getTaches()
+      .subscribe((todos: any[]) => {
+        this.taches = todos.map<Tache>((todo: any) => {
+          return {
+            titre: todo.title,
+            fait: todo.done
+          }
+        })
+      }) // .subscribe() donne l'action a réaliser avec le résultat;
   }
 
   tache: Tache = {titre: "Afficher une tache", fait: true}

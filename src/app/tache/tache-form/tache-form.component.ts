@@ -21,7 +21,14 @@ export class TacheFormComponent implements OnInit {
    */
   soumettreFormulaire(){
     console.log(this.newTache)
-    this.tachesService.addTache(this.newTache);
+    this.tachesService.addTache(this.newTache)
+      .subscribe((resp => {
+        console.log(resp)
+      }));
+    this.resetForm();
+  }
+
+  resetForm(){
     this.newTache = { titre: "", fait: false };
   }
 
