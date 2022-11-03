@@ -1,0 +1,7 @@
+<form (ngSubmit)="soumettreFormulaire()">
+    <div>
+        <label for="titre">Tache à réaliser:</label>
+        <input type="text" name="titre" id="titre" [(ngModel)]="newTache.titre">
+    </div>
+    <button type="submit">Ajouter une tache</button>
+</form>
